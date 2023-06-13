@@ -1,0 +1,61 @@
+body{
+    /* background-color: black; */
+}
+
+p{
+    font-size: 25px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: .5rem 1.5rem;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    margin-top: 200px;
+    border-radius: 20px;
+}
+
+p::after{
+    content: "developer";
+    display: inline-block;
+    animation: animation 6.5s steps(9) infinite;
+    width: 0ch;
+    color: lightseagreen;
+}
+
+p::before{
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    animation: blinking .4s linear alternate infinite;
+}
+
+@keyframes animation {
+    25%{
+        content: "developer";
+        width: 8.5ch;
+    }
+    40%{
+        width: 0ch;
+    }
+    75%{
+        content: "developer";
+        width: 7.5ch;
+    }
+    90%{
+        width: 0ch;
+    }
+}
+@keyframes blinking {
+    100%{
+        opacity: 0;
+    } 
+}
